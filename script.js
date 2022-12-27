@@ -41,18 +41,15 @@ window.onload = () => {
     const scene = document.querySelector('a-scene');
   
     navigator.geolocation.getCurrentPosition(function (position) {
-      const latitude = position.coords.latitude;
-      const longitude = position.coords.longitude;
-  
+      
       const model = document.createElement('a-entity');
-      model.setAttribute('gps-entity-place', `latitude: ${latitude}; longitude: ${longitude};`);
-  
+      
       setModel(models[modelIndex], model);
   
       model.setAttribute('animation-mixer', '');
   
       document.querySelector('button[data-action="change"]').addEventListener('click', function () {
-        const entity = document.querySelector('[gps-entity-place]');
+      
         modelIndex++;
         const newIndex = modelIndex % models.length;
         setModel(models[newIndex], entity);
