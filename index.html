@@ -17,7 +17,12 @@
     vr-mode-ui="enabled: false"
 		embedded
     arjs='trackingMethod: best; sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>    
-    <a-camera></a-camera>
+    <a-camera
+	      
+	       id="camera"
+        position="0 3 0"
+        look-controls="reverseMouseDrag:true; touchEnabled: false"
+         rotation-reader></a-camera>
   </a-scene>
   <div class="centered">
     <button data-action="change">?</button>
