@@ -41,7 +41,7 @@ window.onload = () => {
     const scene = document.querySelector('a-scene');
   
     navigator.geolocation.getCurrentPosition(function (position) {
-      
+       model.setAttribute('animation-mixer', '');
       const model = document.createElement('a-entity');
       
       setModel(models[modelIndex], model);
