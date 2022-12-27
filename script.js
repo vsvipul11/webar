@@ -5,7 +5,7 @@ window.onload = () => {
   const models = [
     {
       url: './assets/magnemite/scene.gltf',
-      scale: '0.5 0.5 0.5',
+      scale: '0.06 0.06 0.06',
       rotation: '0 225 0'
     },
 //     {
@@ -46,7 +46,7 @@ window.onload = () => {
       
       setModel(models[modelIndex], model);
   
-      model.setAttribute('animation-mixer', '');
+
   
       document.querySelector('button[data-action="change"]').addEventListener('click', function () {
       
